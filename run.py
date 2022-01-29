@@ -1,4 +1,3 @@
-import math
 import utils
 import argparse
 import json
@@ -120,6 +119,8 @@ if __name__ == '__main__':
         'algorithm_name': args.algorithm,
         'num_of_transaction': itemSetResultLen
     })
+
+    print(f'Statistics:\n {return_data}')
 
     with open('return_data.txt', 'a') as outfile:
         json.dump(return_data, outfile)
